@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Titul pagini cu employees</title>
+</head>
+<body>
+
+<h1>Employees records</h1>
+
+<table border="10" , style="color: midnightblue; width: 100%">
+    <tr>
+        <th>Id</th>
+        <th>Job</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <fieldset style="color: black">
+        <tr th:each="employee:${employeeList}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.job}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.salary}"></td>
+        </tr>
+    </fieldset>
+</table>
+
+</body>
+</html>
