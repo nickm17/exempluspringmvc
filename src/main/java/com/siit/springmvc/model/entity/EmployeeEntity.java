@@ -1,4 +1,4 @@
-package com.siit.springmvc.model;
+package com.siit.springmvc.model.entity;
 
 import java.time.LocalDate;
 
@@ -12,18 +12,22 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-//@Builder
-//@AllArgsConstructor
-//@Entity
-//@Table(name = "employee")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "employee")
 public class EmployeeEntity {
 
-//    @Id //pkey
-//    @GeneratedValue(strategy = GenerationType.IDENTITY) // pentru generate auto
-    private int id;
+    @Id //pkey
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // pentru generate auto
+    private Integer id;
 
     private String job;
 
@@ -37,10 +41,11 @@ public class EmployeeEntity {
     @Column(name = "comm")
     private Integer comision;
 
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "department_Id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "department_Id", referencedColumnName = "id")
     private DepartmentEntity department;
 
-    private LocalDate hiredate;
+    @Builder.Default
+    private LocalDate hiredate = LocalDate.now();
 
 }

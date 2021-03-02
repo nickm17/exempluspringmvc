@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add employee</title>
+</head>
+<body>
+<a th:href="@{/employees/showEmployees}">Back to Employee List</a>
+
+<form th:action="@{'/employees/add'}" th:object="${employeeToAdd}" th:method="POST">
+    <fieldset style="color:blue">
+        <legend style="color:blue"><h2>Add Employee</h2></legend>
+
+        <label for="name">Name:</label><br/>
+        <input id="name" type="text" name="name" th:field="*{name}"><br>
+
+        <label for="salary">Salary:</label><br/>
+        <input id="salary" type="text" name="color" th:field="*{salary}"><br>
+
+        <label for="job">Job:</label>
+        <input id="job" type="text" name="job" th:field="*{job}"><br>
+
+        <label for="department">Department:</label>
+        <input id="department" type="text" name="department" th:field="*{department}"><br>
+
+        <label for="manager">Manager:</label>
+        <input id="manager" type="text" name="manager" th:field="*{manager}"><br>
+
+        <input type="submit" value="Insert New Employee" style="color:blue;">
+    </fieldset>
+</form>
+
+</body>
+</html>

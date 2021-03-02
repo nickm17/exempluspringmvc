@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+
+    <title>Titul pagini cu employees</title>
+    <!--    <style>-->
+    <!--        tr {-->
+    <!--            color: blue;-->
+    <!--        }-->
+
+    <!--        #tableHeaderId {-->
+    <!--            color: blueviolet;-->
+    <!--            border-width: thick;-->
+    <!--        }-->
+    <!--    </style>-->
+</head>
+
+<body>
+
+<header>
+    <h1 style="alignment: center">Employees records</h1>
+</header>
+
+<table border="10" , style="color: midnightblue; width: 100%">
+    <tr id="tableHeaderId">
+        <th>Id</th>
+        <th>Job</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <tr>
+        <td>7788</td>
+        <td>ANALYST</td>
+        <td>SCOTT</td>
+        <td>3450</td>
+        <td><a href="/employees/7788/edit">EDIT</a></td>
+        <td><a href="/employees/7788/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7788/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7839</td>
+        <td>PRESIDENT</td>
+        <td>KING</td>
+        <td>5000</td>
+        <td><a href="/employees/7839/edit">EDIT</a></td>
+        <td><a href="/employees/7839/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7839/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7844</td>
+        <td>SALESMAN</td>
+        <td>TURNER</td>
+        <td>1500</td>
+        <td><a href="/employees/7844/edit">EDIT</a></td>
+        <td><a href="/employees/7844/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7844/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7876</td>
+        <td>CLERK</td>
+        <td>ADAMS</td>
+        <td>1265</td>
+        <td><a href="/employees/7876/edit">EDIT</a></td>
+        <td><a href="/employees/7876/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7876/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7900</td>
+        <td>CLERK</td>
+        <td>JAMES</td>
+        <td>950</td>
+        <td><a href="/employees/7900/edit">EDIT</a></td>
+        <td><a href="/employees/7900/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7900/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7902</td>
+        <td>ANALYST</td>
+        <td>FORD</td>
+        <td>3450</td>
+        <td><a href="/employees/7902/edit">EDIT</a></td>
+        <td><a href="/employees/7902/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7902/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7934</td>
+        <td>CLERK</td>
+        <td>MILLER</td>
+        <td>1300</td>
+        <td><a href="/employees/7934/edit">EDIT</a></td>
+        <td><a href="/employees/7934/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7934/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>7935</td>
+        <td>CLERK</td>
+        <td>MILLER</td>
+        <td>1300</td>
+        <td><a href="/employees/7935/edit">EDIT</a></td>
+        <td><a href="/employees/7935/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/7935/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>123456800</td>
+        <td>sdasd</td>
+        <td>sdsadas</td>
+        <td>1233</td>
+        <td><a href="/employees/123456800/edit">EDIT</a></td>
+        <td><a href="/employees/123456800/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/123456800/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>123456801</td>
+        <td>sdasd</td>
+        <td></td>
+        <td>1234</td>
+        <td><a href="/employees/123456801/edit">EDIT</a></td>
+        <td><a href="/employees/123456801/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/123456801/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>123456802</td>
+        <td>adddddd</td>
+        <td></td>
+        <td>1233</td>
+        <td><a href="/employees/123456802/edit">EDIT</a></td>
+        <td><a href="/employees/123456802/edit">DELETE</a></td>
+        <td>
+            <form action="/employees/123456802/delete" method="POST">
+                Delete this employee? <input type="submit" value="Yes"/>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<p><a href="/employees/add">Insert new employee</a></p>
+
+</body>
+
+</html>

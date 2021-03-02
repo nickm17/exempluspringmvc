@@ -1,0 +1,48 @@
+h1, h2 {
+    color: #ff4f57;
+}
+
+a {
+    color: orange;
+}
+
+p {
+    color: green;
+}
+
+table {
+    border-collapse: collapse;
+    border-width: 5px;
+}
+
+table th, table td {
+    padding: 5px;
+    color: blueviolet;
+    border-width: 3px;
+}
+
+.class {}
+
+#id {}
+
+/*tr {*/
+/*    color: blue;*/
+/*}*/
+
+/*#tableHeaderId {*/
+/*    color: blueviolet;*/
+/*    border-width: thick;*/
+/*}*/
+
+
+tr {
+    color: red;
+    text-align: center
+
+}
+
+#tableHeaderId {
+    color: blueviolet;
+    border-width: thick;
+    text-align: center
+}
