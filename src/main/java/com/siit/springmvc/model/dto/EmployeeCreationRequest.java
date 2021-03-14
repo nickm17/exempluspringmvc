@@ -1,5 +1,7 @@
 package com.siit.springmvc.model.dto;
 
+import com.siit.springmvc.exception.UniqueEmployeeName;
+
 import java.time.LocalDate;
 
 import javax.validation.constraints.Max;
@@ -32,6 +34,7 @@ public class EmployeeCreationRequest {
     private Integer manager;
 
     @NotBlank
+    @UniqueEmployeeName
     private String name;
 
     @NotNull
