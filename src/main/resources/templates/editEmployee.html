@@ -11,17 +11,22 @@
 
     <fieldset style="color:blue">
         <legend style="color:blue"><h2>Update Employee</h2></legend>
-        Name:<br>
-        <input type="text" name="name" th:field="*{name}"><br>
-        <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
-        Salary:<br>
-        <input type="text" name="color" th:field="*{salary}"><br>
 
-        <label for="job">Job:</label><br/>
-        <input id="job" type="text" name="job" th:field="*{job}"><br>
+        <label for="name">Name:</label><br/>
+        <input id="name" type="text" name="name" th:field="*{name}">
+        <span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}" /><br>
 
-        <label for="manager">Manager:</label><br/>
-        <input id="manager" type="text" name="manager" th:field="*{manager}"><br>
+        <label for="salary">Salary:</label><br/>
+        <input id="salary" type="text" name="color" th:field="*{salary}">
+        <span style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}" /><br>
+
+        <label for="job">Job:</label>
+        <input id="job" type="text" name="job" th:field="*{job}">
+        <span style="color: red" th:if="${#fields.hasErrors('job')}" th:errors="*{job}" /><br>
+
+        <label for="manager">Manager:</label>
+        <input id="manager" type="text" name="manager" th:field="*{manager}">
+        <span style="color: red" th:if="${#fields.hasErrors('manager')}" th:errors="*{manager}" /><br>
 
         <input type="submit" value="Update Employee" style="color:blue;">
     </fieldset>

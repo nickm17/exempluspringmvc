@@ -12,19 +12,24 @@
         <legend style="color:blue"><h2>Add Employee</h2></legend>
 
         <label for="name">Name:</label><br/>
-        <input id="name" type="text" name="name" th:field="*{name}"><br>
+        <input id="name" type="text" name="name" th:field="*{name}">
+        <span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}" /><br>
 
         <label for="salary">Salary:</label><br/>
-        <input id="salary" type="text" name="color" th:field="*{salary}"><br>
+        <input id="salary" type="text" name="color" th:field="*{salary}">
+        <span style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}" /><br>
 
         <label for="job">Job:</label>
-        <input id="job" type="text" name="job" th:field="*{job}"><br>
+        <input id="job" type="text" name="job" th:field="*{job}">
+        <span style="color: red" th:if="${#fields.hasErrors('job')}" th:errors="*{job}" /><br>
 
         <label for="department">Department:</label>
-        <input id="department" type="text" name="department" th:field="*{department}"><br>
+        <input id="department" type="text" name="department" th:field="*{department}">
+        <span style="color: red" th:if="${#fields.hasErrors('department')}" th:errors="*{department}" /><br>
 
         <label for="manager">Manager:</label>
-        <input id="manager" type="text" name="manager" th:field="*{manager}"><br>
+        <input id="manager" type="text" name="manager" th:field="*{manager}">
+        <span style="color: red" th:if="${#fields.hasErrors('manager')}" th:errors="*{manager}" /><br>
 
         <input type="submit" value="Insert New Employee" style="color:blue;">
     </fieldset>

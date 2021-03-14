@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,9 @@ import java.util.List;
 import javax.validation.Valid;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Controller
 @AllArgsConstructor
 @RequestMapping("/employees")
@@ -57,10 +60,13 @@ public class EmployeeController {
         return "addEmployee";
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public String add(@ModelAttribute(name = "employeeToAdd") @Valid EmployeeCreationRequest request,
-                      Model model) {
+    public String add(@ModelAttribute(name = "employeeToAdd") @Valid EmployeeCreationRequest request, BindingResult bindingResult, Model model) {
+
+        if (bindingResult.hasErrors()) {
+            return "addEmployee";
+        }
 
         employeeService.createEmployee(request);
 
@@ -91,12 +97,11 @@ public class EmployeeController {
     @PostMapping("/{employeeId}/edit")
     public String editEmployee(@PathVariable int employeeId,
                                @ModelAttribute(name = "employeeToEdit") @Valid EmployeeUpdateRequest request,
-                               Model model) {
-//                               BindingResult bindingResult) {
-//
-//        if (bindingResult.hasErrors()) {
-//            return "form";
-//        }
+                               BindingResult bindingResult, Model model) {
+
+        if (bindingResult.hasErrors()) {
+            return "editEmployee";
+        }
 
         request.setId(employeeId);
         employeeService.updateEmployee(request);
